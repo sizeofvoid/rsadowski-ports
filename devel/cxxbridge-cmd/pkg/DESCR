@@ -1,0 +1,2 @@
+cxxbridge is the standalone C++ code generator from the CXX project, which
+provides a safe foreign function interface between Rust and C++.
