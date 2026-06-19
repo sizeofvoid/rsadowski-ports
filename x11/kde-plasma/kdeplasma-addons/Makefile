@@ -22,6 +22,7 @@ MODKDE_TRANSLATIONS =	Yes
 MODKDE_ICON_CACHE = Yes
 
 BUILD_DEPENDS =	archivers/gtar \
+		comms/libhidapi \
 		devel/kf6/kitemmodels \
 		devel/kf6/purpose \
 		devel/kf6/knewstuff \
@@ -69,7 +70,35 @@ CXXFLAGS +=	-I${LOCALBASE}/include/
 
 DEBUG_PACKAGES =	${BUILD_PACKAGES}
 
+MODULES +=		devel/cargo
+
+MODCARGO_BUILD =	No
+MODCARGO_INSTALL =	No
+
+MODCARGO_DIST_SUBDIR = ../cargo
+MODCARGO_CARGOTOML =	${WRKSRC}/kdeds/kameleon/qmk/kameleon-qmk-helper/Cargo.toml
+
+BUILD_DEPENDS =		devel/corrosion
+
+
+CONFIGURE_ENV +=	CARGO_HOME=${WRKDIR}/cargo-home
+MAKE_ENV +=		CARGO_HOME=${WRKDIR}/cargo-home
+
+CONFIGURE_ARGS +=	-DINSTALLED_CXXBRIDGE=${LOCALBASE}/bin/cxxbridge-cmd
+
+pre-configure:
+	mkdir -p ${WRKDIR}/cargo-home
+	printf '%s\n' \
+		'[source.crates-io]' \
+		'replace-with = "modcargo"' \
+		'[source.modcargo]' \
+		'directory = "${MODCARGO_VENDOR_DIR}"' \
+		'[net]' \
+		'offline = true' \
+		> ${WRKDIR}/cargo-home/config.toml
+
 post-extract:
 	@ln -sf ${LOCALBASE}/bin/gtar ${WRKDIR}/bin/tar
 
+.include "crates.inc"
 .include <bsd.port.mk>

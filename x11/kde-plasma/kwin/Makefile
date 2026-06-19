@@ -1,8 +1,8 @@
 COMMENT =		Wayland window manager for KDE Plasma Desktops
 DISTNAME =		kwin-${VERSION}
 
-SHARED_LIBS +=  kcmkwincommon             1.0 # 0.0
-SHARED_LIBS +=  kwin                      5.0 # 0.0
+SHARED_LIBS +=  kcmkwincommon             1.1 # 0.0
+SHARED_LIBS +=  kwin                      6.0 # 0.0
 
 MODKDE_TRANSLATIONS =	Yes
 MODKDE_ICON_CACHE =	Yes
@@ -21,10 +21,10 @@ WANTLIB += Qt6OpenGLWidgets Qt6Qml Qt6Quick Qt6Svg Qt6UiTools
 WANTLIB += Qt6Widgets Qt6Xml SM X11 Xext c canberra display-info
 WANTLIB += drm eis epoll-shim epoxy gbm input kdecorations3 kdecorations3private
 WANTLIB += lcms2 m pipewire-0.3 qaccessibilityclient-qt6 udev
-WANTLIB += wayland-client wayland-server xcb xcb-composite xcb-dri3
-WANTLIB += xcb-icccm xcb-keysyms xcb-present xcb-randr xcb-render
-WANTLIB += xcb-res xcb-shape xcb-shm xcb-sync xcb-xfixes xcb-xinerama
-WANTLIB += xcb-xinput xcvt xkbcommon
+WANTLIB += vulkan wayland-client wayland-server xcb xcb-composite
+WANTLIB += xcb-dri3 xcb-icccm xcb-keysyms xcb-present xcb-randr
+WANTLIB += xcb-render xcb-res xcb-shape xcb-shm xcb-sync xcb-xfixes
+WANTLIB += xcb-xinerama xcb-xinput xcvt xkbcommon
 
 MODULES +=	lang/python
 
@@ -106,4 +106,5 @@ TEST_IS_INTERACTIVE =	X11
 
 PORTHOME =		${WRKDIR}
 
+LIB_DEPENDS += graphics/vulkan-loader
 .include <bsd.port.mk>

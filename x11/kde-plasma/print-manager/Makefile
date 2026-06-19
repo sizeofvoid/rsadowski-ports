@@ -8,10 +8,11 @@ CATEGORIES =	sysutils print
 
 WANTLIB += ${COMPILER_LIBCXX} GL KF6ColorScheme KF6Completion
 WANTLIB += KF6ConfigCore KF6ConfigGui KF6ConfigWidgets KF6CoreAddons
-WANTLIB += KF6DBusAddons KF6I18n KF6JobWidgets KF6KCMUtilsCore
+WANTLIB += KF6DBusAddons KF6I18n KF6I18nQml KF6JobWidgets KF6KCMUtilsCore
 WANTLIB += KF6KCMUtilsQuick KF6KIOCore KF6KIOGui KF6KIOWidgets
 WANTLIB += KF6Notifications KF6Service KF6WidgetsAddons KF6WindowSystem
-WANTLIB += Plasma Qt6Core Qt6DBus Qt6Gui Qt6Network Qt6Qml Qt6Widgets
+WANTLIB += KirigamiApp KirigamiPlatform Plasma Qt6Core Qt6DBus
+WANTLIB += Qt6Gui Qt6Network Qt6OpenGL Qt6Qml Qt6Quick Qt6Widgets
 WANTLIB += X11 c cups m
 
 MODKDE_DESKTOP_FILE = yes
@@ -40,4 +41,6 @@ LIB_DEPENDS =	devel/kf6/kcmutils \
 		x11/kde-plasma/libplasma>=${VERSION} \
 		x11/qt6/qtdeclarative
 
+LIB_DEPENDS += graphics/kirigami-addons
+LIB_DEPENDS += devel/kf6/kirigami 
 .include <bsd.port.mk>
