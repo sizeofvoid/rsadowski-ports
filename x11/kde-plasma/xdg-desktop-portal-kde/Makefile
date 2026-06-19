@@ -25,7 +25,6 @@ LIB_DEPENDS =	devel/kf6/kbookmarks \
 		devel/kf6/kcoreaddons \
 		devel/kf6/kcrash \
 		devel/kf6/kglobalaccel \
-		 \
 		devel/kf6/ki18n \
 		devel/kf6/kiconthemes \
 		devel/kf6/kio \

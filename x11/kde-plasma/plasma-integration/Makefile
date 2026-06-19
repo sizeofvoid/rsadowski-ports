@@ -26,7 +26,6 @@ LIB_DEPENDS =	devel/kf6/kbookmarks \
 		devel/kf6/kcolorscheme \
 		devel/kf6/kcompletion \
 		devel/kf6/kconfig \
-		 \
 		devel/kf6/kcoreaddons \
 		devel/kf6/kguiaddons \
 		devel/kf6/ki18n \
@@ -39,7 +38,6 @@ LIB_DEPENDS =	devel/kf6/kbookmarks \
 		devel/kf6/kstatusnotifieritem \
 		devel/kf6/kwidgetsaddons \
 		devel/kf6/kwindowsystem \
-		 \
 		devel/kf6/solid \
 		wayland/wayland \
 		x11/qt6/qtdeclarative \

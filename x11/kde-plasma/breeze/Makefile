@@ -22,7 +22,6 @@ LIB_DEPENDS =	devel/kf6/frameworkintegration \
 		devel/kf6/kguiaddons \
 		devel/kf6/ki18n \
 		devel/kf6/kiconthemes \
-		 \
 		devel/kf6/kwidgetsaddons \
 		devel/kf6/kwindowsystem \
 		x11/kde-plasma/kdecoration>=${VERSION} \

@@ -32,11 +32,13 @@ LIB_DEPENDS =	devel/kf6/kcmutils \
 		devel/kf6/kdbusaddons \
 		devel/kf6/ki18n \
 		devel/kf6/kio \
+		devel/kf6/kirigami \
 		devel/kf6/kjobwidgets \
 		devel/kf6/knotifications \
 		devel/kf6/kservice \
 		devel/kf6/kwidgetsaddons \
 		devel/kf6/kwindowsystem \
+		graphics/kirigami-addons \
 		print/cups,-libs \
 		x11/kde-plasma/libplasma>=${VERSION} \
 		x11/qt6/qtdeclarative
