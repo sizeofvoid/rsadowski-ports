@@ -1,5 +1,6 @@
 # XXX If broken on an architecture, remove the arch from LLVM_ARCHS.
 ONLY_FOR_ARCHS ?=	${LLVM_ARCHS}
+ONLY_FOR_ARCHS-lldb ?=	amd64 arm64
 
 DPB_PROPERTIES =	parallel parallel2
 .if ${MACHINE_ARCH:Mi386} && ${LLVM_VERSION:M22*}
@@ -10,6 +11,7 @@ COMMENT-main =		modular, fast C/C++/ObjC compiler, static analyzer and tools
 COMMENT-libcxx =	C++ standard library
 COMMENT-lldb =		LLDB debugger
 COMMENT-python =	Python bindings for Clang
+COMMENT-tools =		Clang extra tools
 
 DISTNAME =		llvm-project-${LLVM_VERSION}.src
 
@@ -20,11 +22,13 @@ PKGNAME =		llvm-${LLVM_VERSION}
 PKGNAME-libcxx =	libcxx-${LLVM_VERSION}
 PKGNAME-lldb =		lldb-${LLVM_VERSION}
 PKGNAME-python =	${MODPY_PY_PREFIX}llvm-${LLVM_VERSION}
+PKGNAME-tools =		clang-tools-extra-${LLVM_VERSION}
 
 PKGSPEC-main =		llvm-${LLVM_PKGSPEC}
 PKGSPEC-libcxx =	libcxx-${LLVM_PKGSPEC}
 PKGSPEC-lldb =		lldb-${LLVM_PKGSPEC}
 PKGSPEC-python =	${MODPY_PY_PREFIX}llvm-${LLVM_PKGSPEC}
+PKGSPEC-tools =		clang-tools-extra-${LLVM_PKGSPEC}
 
 CATEGORIES =	devel
 
@@ -43,13 +47,15 @@ WANTLIB-lldb += m panel ${MODPY_WANTLIB} z
 WANTLIB-lldb += llvm${LLVM_MAJOR}/lib/LLVM
 WANTLIB-lldb += llvm${LLVM_MAJOR}/lib/clang-cpp
 WANTLIB-python =
+WANTLIB-tools += ${COMPILER_LIBCXX} c m
+WANTLIB-tools += llvm${LLVM_MAJOR}/lib/LLVM
+WANTLIB-tools += llvm${LLVM_MAJOR}/lib/clang-cpp
 
 LIB_DEPENDS-lldb += devel/llvm/${LLVM_MAJOR},-main
+LIB_DEPENDS-tools += devel/llvm/${LLVM_MAJOR},-main
 
 SITES =		https://github.com/llvm/llvm-project/releases/download/llvmorg-${LLVM_VERSION}/
 EXTRACT_SUFX =	.tar.xz
-
-LIBCPP_PACKAGE=		-libcxx
 
 # mimic the way base libc++ is built except for the namespace which
 # is set to __E${LLVM_MAJOR} to avoid conflicts with base libc++
@@ -75,17 +81,21 @@ CONFIGURE_ARGS +=	\
 	-DLIBUNWIND_INSTALL_SHARED_LIBRARY=OFF \
 	-DLIBUNWIND_INSTALL_STATIC_LIBRARY=OFF
 
-# BUILD_LLDB is defined by /usr/share/mk/bsd.own.mk
-.if ${BUILD_LLDB:L} == yes
-MULTI_PACKAGES ?=	-main -python -lldb ${LIBCPP_PACKAGE}
-PROJECTS ?=		clang;lld;lldb
-.else
-MULTI_PACKAGES ?=	-main -python ${LIBCPP_PACKAGE}
-PROJECTS ?=		clang;lld
+MULTI_PACKAGES ?=	-main -python -lldb -libcxx -tools
+PSEUDO_FLAVORS ?=	no_lldb no_tools
+
+.include <bsd.port.arch.mk>
+.if ${BUILD_PACKAGES:M-lldb}
+LLDB_PROJ =	;lldb
+.endif
+.if ${BUILD_PACKAGES:M-tools}
+TOOLS_PROJ =	;clang-tools-extra
 .endif
 
-.for i in ${MULTI_PACKAGES:S/-//g}
-DESCR-${i} =	${.CURDIR}/../files/DESCR-${i}
+PROJECTS ?=	clang;lld${LLDB_PROJ}${TOOLS_PROJ}
+
+.for i in ${MULTI_PACKAGES}
+DESCR${i} =	${.CURDIR}/../files/DESCR${i}
 .endfor
 
 WRKDIST =	${WRKDIR}/llvm-project-${LLVM_VERSION}.src

@@ -21,4 +21,6 @@ PERMIT_PACKAGE =	Yes
 
 MODULES +=	lang/python
 
+FLAVOR =	no_tools
+
 .include <bsd.port.mk>

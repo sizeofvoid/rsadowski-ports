@@ -1,0 +1,563 @@
+@pkgpath devel/clang-tools-extra
+bin/clang-apply-replacements-${LLVM_MAJOR}
+bin/clang-change-namespace-${LLVM_MAJOR}
+bin/clang-doc-${LLVM_MAJOR}
+bin/clang-include-cleaner-${LLVM_MAJOR}
+bin/clang-include-fixer-${LLVM_MAJOR}
+bin/clang-move-${LLVM_MAJOR}
+bin/clang-query-${LLVM_MAJOR}
+bin/clang-reorder-fields-${LLVM_MAJOR}
+bin/clang-tidy-${LLVM_MAJOR}
+bin/clangd-${LLVM_MAJOR}
+bin/find-all-symbols-${LLVM_MAJOR}
+bin/modularize-${LLVM_MAJOR}
+bin/pp-trace-${LLVM_MAJOR}
+bin/run-clang-tidy-${LLVM_MAJOR}
+@bin ${LLVM_BASE}/bin/clang-apply-replacements
+@bin ${LLVM_BASE}/bin/clang-change-namespace
+@bin ${LLVM_BASE}/bin/clang-doc
+@bin ${LLVM_BASE}/bin/clang-include-cleaner
+@bin ${LLVM_BASE}/bin/clang-include-fixer
+@bin ${LLVM_BASE}/bin/clang-move
+@bin ${LLVM_BASE}/bin/clang-query
+@bin ${LLVM_BASE}/bin/clang-reorder-fields
+@bin ${LLVM_BASE}/bin/clang-tidy
+@bin ${LLVM_BASE}/bin/clangd
+@bin ${LLVM_BASE}/bin/find-all-symbols
+@bin ${LLVM_BASE}/bin/modularize
+@bin ${LLVM_BASE}/bin/pp-trace
+${LLVM_BASE}/bin/run-clang-tidy
+${LLVM_BASE}/include/clang-tidy/
+${LLVM_BASE}/include/clang-tidy/ClangTidy.h
+${LLVM_BASE}/include/clang-tidy/ClangTidyCheck.h
+${LLVM_BASE}/include/clang-tidy/ClangTidyDiagnosticConsumer.h
+${LLVM_BASE}/include/clang-tidy/ClangTidyForceLinker.h
+${LLVM_BASE}/include/clang-tidy/ClangTidyModule.h
+${LLVM_BASE}/include/clang-tidy/ClangTidyModuleRegistry.h
+${LLVM_BASE}/include/clang-tidy/ClangTidyOptions.h
+${LLVM_BASE}/include/clang-tidy/ClangTidyProfiling.h
+${LLVM_BASE}/include/clang-tidy/ExpandModularHeadersPPCallbacks.h
+${LLVM_BASE}/include/clang-tidy/FileExtensionsSet.h
+${LLVM_BASE}/include/clang-tidy/GlobList.h
+${LLVM_BASE}/include/clang-tidy/NoLintDirectiveHandler.h
+${LLVM_BASE}/include/clang-tidy/abseil/
+${LLVM_BASE}/include/clang-tidy/abseil/AbseilMatcher.h
+${LLVM_BASE}/include/clang-tidy/abseil/CleanupCtadCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationAdditionCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationComparisonCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationConversionCastCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationDivisionCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationFactoryFloatCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationFactoryScaleCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationRewriter.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationSubtractionCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/DurationUnnecessaryConversionCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/FasterStrsplitDelimiterCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/NoInternalDependenciesCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/NoNamespaceCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/RedundantStrcatCallsCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/StrCatAppendCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/StringFindStartswithCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/StringFindStrContainsCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/TimeComparisonCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/TimeSubtractionCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/UncheckedStatusOrAccessCheck.h
+${LLVM_BASE}/include/clang-tidy/abseil/UpgradeDurationConversionsCheck.h
+${LLVM_BASE}/include/clang-tidy/altera/
+${LLVM_BASE}/include/clang-tidy/altera/IdDependentBackwardBranchCheck.h
+${LLVM_BASE}/include/clang-tidy/altera/KernelNameRestrictionCheck.h
+${LLVM_BASE}/include/clang-tidy/altera/SingleWorkItemBarrierCheck.h
+${LLVM_BASE}/include/clang-tidy/altera/StructPackAlignCheck.h
+${LLVM_BASE}/include/clang-tidy/altera/UnrollLoopsCheck.h
+${LLVM_BASE}/include/clang-tidy/android/
+${LLVM_BASE}/include/clang-tidy/android/CloexecAccept4Check.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecAcceptCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecCreatCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecDupCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecEpollCreate1Check.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecEpollCreateCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecFopenCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecInotifyInit1Check.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecInotifyInitCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecMemfdCreateCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecOpenCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecPipe2Check.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecPipeCheck.h
+${LLVM_BASE}/include/clang-tidy/android/CloexecSocketCheck.h
+${LLVM_BASE}/include/clang-tidy/android/ComparisonInTempFailureRetryCheck.h
+${LLVM_BASE}/include/clang-tidy/boost/
+${LLVM_BASE}/include/clang-tidy/boost/UseRangesCheck.h
+${LLVM_BASE}/include/clang-tidy/boost/UseToStringCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/
+${LLVM_BASE}/include/clang-tidy/bugprone/ArgumentCommentCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/AssertSideEffectCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/AssignmentInIfConditionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/BadSignalToKillThreadCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/BitwisePointerCastCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/BoolPointerImplicitConversionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/BranchCloneCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/CapturingThisInMemberVariableCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/CastingThroughVoidCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ChainedComparisonCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/CommandProcessorCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ComparePointerToMemberVirtualFunctionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/CopyConstructorInitCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/CopyConstructorMutatesArgumentCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/CrtpConstructorAccessibilityCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/DanglingHandleCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/DefaultOperatorNewOnOveralignedTypeCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/DerivedMethodShadowingBaseMethodCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/DynamicStaticInitializersCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/EasilySwappableParametersCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/EmptyCatchCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ExceptionCopyConstructorThrowsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ExceptionEscapeCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/FloatLoopCounterCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/FoldInitTypeCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ForwardDeclarationNamespaceCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ForwardingReferenceOverloadCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ImplicitWideningOfMultiplicationResultCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/InaccurateEraseCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/IncDecInConditionsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/IncorrectEnableIfCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/IncorrectEnableSharedFromThisCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/IncorrectRoundingsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/InfiniteLoopCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/IntegerDivisionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/InvalidEnumDefaultInitializationCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/LambdaFunctionNameCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MacroParenthesesCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MacroRepeatedSideEffectsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MisleadingSetterOfReferenceCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MisplacedOperatorInStrlenInAllocCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MisplacedPointerArithmeticInAllocCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MisplacedWideningCastCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MoveForwardingReferenceCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MultiLevelImplicitPointerConversionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MultipleNewInOneExpressionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/MultipleStatementMacroCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/NarrowingConversionsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/NoEscapeCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/NonZeroEnumToBoolConversionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/NondeterministicPointerIterationOrderCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/NotNullTerminatedResultCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/OptionalValueConversionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ParentVirtualCallCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/PointerArithmeticOnPolymorphicObjectCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/PosixReturnCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/RandomGeneratorSeedCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/RawMemoryCallOnNonTrivialTypeCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/RedundantBranchConditionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ReservedIdentifierCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ReturnConstRefFromParameterCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SharedPtrArrayMismatchCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SignalHandlerCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SignedCharMisuseCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SizeofContainerCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SizeofExpressionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SmartPtrArrayMismatchCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SpuriouslyWakeUpFunctionsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/StandaloneEmptyCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/StdNamespaceModificationCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/StringConstructorCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/StringIntegerAssignmentCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/StringLiteralWithEmbeddedNulCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/StringviewNullptrCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousEnumUsageCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousIncludeCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousMemoryComparisonCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousMemsetUsageCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousMissingCommaCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousReallocUsageCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousSemicolonCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousStringCompareCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SuspiciousStringviewDataUsageCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SwappedArgumentsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/SwitchMissingDefaultCaseCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/TaggedUnionMemberCountCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/TerminatingContinueCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ThrowKeywordMissingCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/ThrowingStaticInitializationCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/TooSmallLoopVariableCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UncheckedOptionalAccessCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UncheckedStringToNumberConversionCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UndefinedMemoryManipulationCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UndelegatedConstructorCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UnhandledExceptionAtNewCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UnhandledSelfAssignmentCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UnintendedCharOstreamOutputCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UniquePtrArrayMismatchCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UnsafeFunctionsCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UnusedLocalNonTrivialVariableCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UnusedRaiiCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UnusedReturnValueCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/UseAfterMoveCheck.h
+${LLVM_BASE}/include/clang-tidy/bugprone/VirtualNearMissCheck.h
+${LLVM_BASE}/include/clang-tidy/cert/
+${LLVM_BASE}/include/clang-tidy/concurrency/
+${LLVM_BASE}/include/clang-tidy/concurrency/MtUnsafeCheck.h
+${LLVM_BASE}/include/clang-tidy/concurrency/ThreadCanceltypeAsynchronousCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/AvoidCapturingLambdaCoroutinesCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/AvoidConstOrRefDataMembersCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/AvoidDoWhileCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/AvoidGotoCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/AvoidNonConstGlobalVariablesCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/AvoidReferenceCoroutineParametersCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/InitVariablesCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/InterfacesGlobalInitCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/MacroUsageCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/MisleadingCaptureDefaultByValueCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/MissingStdForwardCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/NoMallocCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/NoSuspendWithLockCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/OwningMemoryCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/PreferMemberInitializerCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProBoundsArrayToPointerDecayCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProBoundsAvoidUncheckedContainerAccessCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProBoundsConstantArrayIndexCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProBoundsPointerArithmeticCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProTypeConstCastCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProTypeCstyleCastCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProTypeMemberInitCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProTypeReinterpretCastCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProTypeStaticCastDowncastCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProTypeUnionAccessCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/ProTypeVarargCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/RvalueReferenceParamNotMovedCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/SlicingCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/SpecialMemberFunctionsCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/UseEnumClassCheck.h
+${LLVM_BASE}/include/clang-tidy/cppcoreguidelines/VirtualClassDestructorCheck.h
+${LLVM_BASE}/include/clang-tidy/custom/
+${LLVM_BASE}/include/clang-tidy/custom/QueryCheck.h
+${LLVM_BASE}/include/clang-tidy/darwin/
+${LLVM_BASE}/include/clang-tidy/darwin/AvoidSpinlockCheck.h
+${LLVM_BASE}/include/clang-tidy/darwin/DispatchOnceNonstaticCheck.h
+${LLVM_BASE}/include/clang-tidy/fuchsia/
+${LLVM_BASE}/include/clang-tidy/fuchsia/DefaultArgumentsCallsCheck.h
+${LLVM_BASE}/include/clang-tidy/fuchsia/DefaultArgumentsDeclarationsCheck.h
+${LLVM_BASE}/include/clang-tidy/fuchsia/OverloadedOperatorCheck.h
+${LLVM_BASE}/include/clang-tidy/fuchsia/StaticallyConstructedObjectsCheck.h
+${LLVM_BASE}/include/clang-tidy/fuchsia/TemporaryObjectsCheck.h
+${LLVM_BASE}/include/clang-tidy/fuchsia/TrailingReturnCheck.h
+${LLVM_BASE}/include/clang-tidy/fuchsia/VirtualInheritanceCheck.h
+${LLVM_BASE}/include/clang-tidy/google/
+${LLVM_BASE}/include/clang-tidy/google/AvoidNSObjectNewCheck.h
+${LLVM_BASE}/include/clang-tidy/google/AvoidThrowingObjCExceptionCheck.h
+${LLVM_BASE}/include/clang-tidy/google/AvoidUnderscoreInGoogletestNameCheck.h
+${LLVM_BASE}/include/clang-tidy/google/DefaultArgumentsCheck.h
+${LLVM_BASE}/include/clang-tidy/google/ExplicitConstructorCheck.h
+${LLVM_BASE}/include/clang-tidy/google/ExplicitMakePairCheck.h
+${LLVM_BASE}/include/clang-tidy/google/FloatTypesCheck.h
+${LLVM_BASE}/include/clang-tidy/google/FunctionNamingCheck.h
+${LLVM_BASE}/include/clang-tidy/google/GlobalNamesInHeadersCheck.h
+${LLVM_BASE}/include/clang-tidy/google/GlobalVariableDeclarationCheck.h
+${LLVM_BASE}/include/clang-tidy/google/IntegerTypesCheck.h
+${LLVM_BASE}/include/clang-tidy/google/OverloadedUnaryAndCheck.h
+${LLVM_BASE}/include/clang-tidy/google/TodoCommentCheck.h
+${LLVM_BASE}/include/clang-tidy/google/UpgradeGoogletestCaseCheck.h
+${LLVM_BASE}/include/clang-tidy/google/UsingNamespaceDirectiveCheck.h
+${LLVM_BASE}/include/clang-tidy/hicpp/
+${LLVM_BASE}/include/clang-tidy/hicpp/ExceptionBaseclassCheck.h
+${LLVM_BASE}/include/clang-tidy/hicpp/IgnoredRemoveResultCheck.h
+${LLVM_BASE}/include/clang-tidy/hicpp/MultiwayPathsCoveredCheck.h
+${LLVM_BASE}/include/clang-tidy/hicpp/NoAssemblerCheck.h
+${LLVM_BASE}/include/clang-tidy/hicpp/SignedBitwiseCheck.h
+${LLVM_BASE}/include/clang-tidy/linuxkernel/
+${LLVM_BASE}/include/clang-tidy/linuxkernel/MustCheckErrsCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/
+${LLVM_BASE}/include/clang-tidy/llvm/HeaderGuardCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/IncludeOrderCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/PreferIsaOrDynCastInConditionalsCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/PreferRegisterOverUnsignedCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/PreferStaticOverAnonymousNamespaceCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/TwineLocalCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/UseNewMLIROpBuilderCheck.h
+${LLVM_BASE}/include/clang-tidy/llvm/UseRangesCheck.h
+${LLVM_BASE}/include/clang-tidy/llvmlibc/
+${LLVM_BASE}/include/clang-tidy/llvmlibc/CalleeNamespaceCheck.h
+${LLVM_BASE}/include/clang-tidy/llvmlibc/ImplementationInNamespaceCheck.h
+${LLVM_BASE}/include/clang-tidy/llvmlibc/InlineFunctionDeclCheck.h
+${LLVM_BASE}/include/clang-tidy/llvmlibc/NamespaceConstants.h
+${LLVM_BASE}/include/clang-tidy/llvmlibc/RestrictSystemLibcHeadersCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/
+${LLVM_BASE}/include/clang-tidy/misc/AnonymousNamespaceInHeaderCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/ConfusableIdentifierCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/ConfusableTable/
+${LLVM_BASE}/include/clang-tidy/misc/ConstCorrectnessCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/CoroutineHostileRAIICheck.h
+${LLVM_BASE}/include/clang-tidy/misc/DefinitionsInHeadersCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/HeaderIncludeCycleCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/IncludeCleanerCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/MisleadingBidirectionalCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/MisleadingIdentifierCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/MisplacedConstCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/MultipleInheritanceCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/NewDeleteOverloadsCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/NoRecursionCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/NonCopyableObjectsCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/NonPrivateMemberVariablesInClassesCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/OverrideWithDifferentVisibilityCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/PredictableRandCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/RedundantExpressionCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/StaticAssertCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/ThrowByValueCatchByReferenceCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/UnconventionalAssignOperatorCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/UniqueptrResetReleaseCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/UnusedAliasDeclsCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/UnusedParametersCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/UnusedUsingDeclsCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/UseAnonymousNamespaceCheck.h
+${LLVM_BASE}/include/clang-tidy/misc/UseInternalLinkageCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/
+${LLVM_BASE}/include/clang-tidy/modernize/AvoidBindCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/AvoidCArraysCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/AvoidCStyleCastCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/AvoidSetjmpLongjmpCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/AvoidVariadicFunctionsCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/ConcatNestedNamespacesCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/DeprecatedHeadersCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/DeprecatedIosBaseAliasesCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/IntegralLiteralExpressionMatcher.h
+${LLVM_BASE}/include/clang-tidy/modernize/LoopConvertCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/LoopConvertUtils.h
+${LLVM_BASE}/include/clang-tidy/modernize/MacroToEnumCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/MakeSharedCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/MakeSmartPtrCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/MakeUniqueCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/MinMaxUseInitializerListCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/PassByValueCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/RawStringLiteralCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/RedundantVoidArgCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/ReplaceAutoPtrCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/ReplaceDisallowCopyAndAssignMacroCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/ReplaceRandomShuffleCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/ReturnBracedInitListCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/ShrinkToFitCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/TypeTraitsCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UnaryStaticAssertCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseAutoCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseBoolLiteralsCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseConstraintsCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseDefaultMemberInitCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseDesignatedInitializersCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseEmplaceCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseEqualsDefaultCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseEqualsDeleteCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseIntegerSignComparisonCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseNodiscardCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseNoexceptCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseNullptrCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseOverrideCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseRangesCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseScopedLockCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseStartsEndsWithCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseStdFormatCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseStdNumbersCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseStdPrintCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseTrailingReturnTypeCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseTransparentFunctorsCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseUncaughtExceptionsCheck.h
+${LLVM_BASE}/include/clang-tidy/modernize/UseUsingCheck.h
+${LLVM_BASE}/include/clang-tidy/mpi/
+${LLVM_BASE}/include/clang-tidy/mpi/BufferDerefCheck.h
+${LLVM_BASE}/include/clang-tidy/mpi/TypeMismatchCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/
+${LLVM_BASE}/include/clang-tidy/objc/AssertEqualsCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/AvoidNSErrorInitCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/DeallocInCategoryCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/ForbiddenSubclassingCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/MissingHashCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/NSDateFormatterCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/NSInvocationArgumentLifetimeCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/PropertyDeclarationCheck.h
+${LLVM_BASE}/include/clang-tidy/objc/SuperSelfCheck.h
+${LLVM_BASE}/include/clang-tidy/openmp/
+${LLVM_BASE}/include/clang-tidy/openmp/ExceptionEscapeCheck.h
+${LLVM_BASE}/include/clang-tidy/openmp/UseDefaultNoneCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/
+${LLVM_BASE}/include/clang-tidy/performance/AvoidEndlCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/EnumSizeCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/FasterStringFindCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/ForRangeCopyCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/ImplicitConversionInLoopCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/InefficientAlgorithmCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/InefficientStringConcatenationCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/InefficientVectorOperationCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/MoveConstArgCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/MoveConstructorInitCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/NoAutomaticMoveCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/NoIntToPtrCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/NoexceptDestructorCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/NoexceptFunctionBaseCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/NoexceptMoveConstructorCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/NoexceptSwapCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/TriviallyDestructibleCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/TypePromotionInMathFnCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/UnnecessaryCopyInitializationCheck.h
+${LLVM_BASE}/include/clang-tidy/performance/UnnecessaryValueParamCheck.h
+${LLVM_BASE}/include/clang-tidy/plugin/
+${LLVM_BASE}/include/clang-tidy/portability/
+${LLVM_BASE}/include/clang-tidy/portability/AvoidPragmaOnceCheck.h
+${LLVM_BASE}/include/clang-tidy/portability/RestrictSystemIncludesCheck.h
+${LLVM_BASE}/include/clang-tidy/portability/SIMDIntrinsicsCheck.h
+${LLVM_BASE}/include/clang-tidy/portability/StdAllocatorConstCheck.h
+${LLVM_BASE}/include/clang-tidy/portability/TemplateVirtualMemberFunctionCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/
+${LLVM_BASE}/include/clang-tidy/readability/AmbiguousSmartptrResetCallCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/AvoidConstParamsInDeclsCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/AvoidNestedConditionalOperatorCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/AvoidReturnWithVoidValueCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/AvoidUnconditionalPreprocessorIfCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/BracesAroundStatementsCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ConstReturnTypeCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ContainerContainsCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ContainerDataPointerCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ContainerSizeEmptyCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ConvertMemberFunctionsToStaticCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/DeleteNullPointerCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/DuplicateIncludeCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ElseAfterReturnCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/EnumInitialValueCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/FunctionCognitiveComplexityCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/FunctionSizeCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/IdentifierLengthCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/IdentifierNamingCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ImplicitBoolConversionCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/InconsistentDeclarationParameterNameCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/InconsistentIfElseBracesCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/IsolateDeclarationCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/MagicNumbersCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/MakeMemberFunctionConstCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/MathMissingParenthesesCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/MisleadingIndentationCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/MisplacedArrayIndexCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/NamedParameterCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/NamespaceCommentCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/NonConstParameterCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/OperatorsRepresentationCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/QualifiedAutoCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantAccessSpecifiersCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantCastingCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantControlFlowCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantDeclarationCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantFunctionPtrDereferenceCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantInlineSpecifierCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantMemberInitCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantParenthesesCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantPreprocessorCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantSmartptrGetCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantStringCStrCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantStringInitCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/RedundantTypenameCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/ReferenceToConstructedTemporaryCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/SimplifyBooleanExprCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/SimplifySubscriptExprCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/StaticAccessedThroughInstanceCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/StaticDefinitionInAnonymousNamespaceCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/StringCompareCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/SuspiciousCallArgumentCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/UniqueptrDeleteReleaseCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/UppercaseLiteralSuffixCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/UseAnyOfAllOfCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/UseConcisePreprocessorDirectivesCheck.h
+${LLVM_BASE}/include/clang-tidy/readability/UseStdMinMaxCheck.h
+${LLVM_BASE}/include/clang-tidy/tool/
+${LLVM_BASE}/include/clang-tidy/tool/ClangTidyMain.h
+${LLVM_BASE}/include/clang-tidy/utils/
+${LLVM_BASE}/include/clang-tidy/utils/ASTUtils.h
+${LLVM_BASE}/include/clang-tidy/utils/Aliasing.h
+${LLVM_BASE}/include/clang-tidy/utils/BracesAroundStatement.h
+${LLVM_BASE}/include/clang-tidy/utils/DeclRefExprUtils.h
+${LLVM_BASE}/include/clang-tidy/utils/DesignatedInitializers.h
+${LLVM_BASE}/include/clang-tidy/utils/ExceptionAnalyzer.h
+${LLVM_BASE}/include/clang-tidy/utils/ExceptionSpecAnalyzer.h
+${LLVM_BASE}/include/clang-tidy/utils/ExprSequence.h
+${LLVM_BASE}/include/clang-tidy/utils/FileExtensionsUtils.h
+${LLVM_BASE}/include/clang-tidy/utils/FixItHintUtils.h
+${LLVM_BASE}/include/clang-tidy/utils/FormatStringConverter.h
+${LLVM_BASE}/include/clang-tidy/utils/HeaderGuard.h
+${LLVM_BASE}/include/clang-tidy/utils/IncludeInserter.h
+${LLVM_BASE}/include/clang-tidy/utils/IncludeSorter.h
+${LLVM_BASE}/include/clang-tidy/utils/LexerUtils.h
+${LLVM_BASE}/include/clang-tidy/utils/Matchers.h
+${LLVM_BASE}/include/clang-tidy/utils/NamespaceAliaser.h
+${LLVM_BASE}/include/clang-tidy/utils/OptionsUtils.h
+${LLVM_BASE}/include/clang-tidy/utils/RenamerClangTidyCheck.h
+${LLVM_BASE}/include/clang-tidy/utils/TransformerClangTidyCheck.h
+${LLVM_BASE}/include/clang-tidy/utils/TypeTraits.h
+${LLVM_BASE}/include/clang-tidy/utils/UseRangesCheck.h
+${LLVM_BASE}/include/clang-tidy/utils/UsingInserter.h
+${LLVM_BASE}/include/clang-tidy/zircon/
+@static-lib ${LLVM_BASE}/lib/libclangApplyReplacements.a
+@static-lib ${LLVM_BASE}/lib/libclangChangeNamespace.a
+@static-lib ${LLVM_BASE}/lib/libclangDaemon.a
+@static-lib ${LLVM_BASE}/lib/libclangDaemonTweaks.a
+@static-lib ${LLVM_BASE}/lib/libclangDoc.a
+@static-lib ${LLVM_BASE}/lib/libclangDocSupport.a
+@static-lib ${LLVM_BASE}/lib/libclangIncludeCleaner.a
+@static-lib ${LLVM_BASE}/lib/libclangIncludeFixer.a
+@static-lib ${LLVM_BASE}/lib/libclangIncludeFixerPlugin.a
+@static-lib ${LLVM_BASE}/lib/libclangMove.a
+@static-lib ${LLVM_BASE}/lib/libclangQuery.a
+@static-lib ${LLVM_BASE}/lib/libclangReorderFields.a
+@static-lib ${LLVM_BASE}/lib/libclangTidy.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyAbseilModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyAlteraModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyAndroidModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyBoostModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyBugproneModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyCERTModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyConcurrencyModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyCppCoreGuidelinesModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyCustomModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyDarwinModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyFuchsiaModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyGoogleModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyHICPPModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyLLVMLibcModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyLLVMModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyLinuxKernelModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyMPIModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyMain.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyMiscModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyModernizeModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyObjCModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyOpenMPModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyPerformanceModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyPlugin.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyPortabilityModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyReadabilityModule.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyUtils.a
+@static-lib ${LLVM_BASE}/lib/libclangTidyZirconModule.a
+@static-lib ${LLVM_BASE}/lib/libclangdMain.a
+@static-lib ${LLVM_BASE}/lib/libclangdRemoteIndex.a
+@static-lib ${LLVM_BASE}/lib/libclangdSupport.a
+@static-lib ${LLVM_BASE}/lib/libfindAllSymbols.a
+${LLVM_BASE}/share/clang-doc/
+${LLVM_BASE}/share/clang-doc/alias-template.mustache
+${LLVM_BASE}/share/clang-doc/clang-doc-default-stylesheet.css
+${LLVM_BASE}/share/clang-doc/clang-doc-mustache.css
+${LLVM_BASE}/share/clang-doc/class-template.mustache
+${LLVM_BASE}/share/clang-doc/comment-template.mustache
+${LLVM_BASE}/share/clang-doc/enum-template.mustache
+${LLVM_BASE}/share/clang-doc/function-template.mustache
+${LLVM_BASE}/share/clang-doc/head-template.mustache
+${LLVM_BASE}/share/clang-doc/index-template.mustache
+${LLVM_BASE}/share/clang-doc/index.js
+${LLVM_BASE}/share/clang-doc/mustache-index.js
+${LLVM_BASE}/share/clang-doc/namespace-template.mustache
+${LLVM_BASE}/share/clang-doc/navbar-template.mustache
+${LLVM_BASE}/share/clang-doc/template.mustache
+${LLVM_BASE}/share/clang/${MODPY_PYCACHE}clang-include-fixer.${MODPY_PYC_MAGIC_TAG}${MODPY_PYOEXTENSION}
+${LLVM_BASE}/share/clang/${MODPY_PYCACHE}clang-include-fixer.${MODPY_PYC_MAGIC_TAG}pyc
+${LLVM_BASE}/share/clang/${MODPY_PYCACHE}clang-tidy-diff.${MODPY_PYC_MAGIC_TAG}${MODPY_PYOEXTENSION}
+${LLVM_BASE}/share/clang/${MODPY_PYCACHE}clang-tidy-diff.${MODPY_PYC_MAGIC_TAG}pyc
+${LLVM_BASE}/share/clang/${MODPY_PYCACHE}run-find-all-symbols.${MODPY_PYC_MAGIC_TAG}${MODPY_PYOEXTENSION}
+${LLVM_BASE}/share/clang/${MODPY_PYCACHE}run-find-all-symbols.${MODPY_PYC_MAGIC_TAG}pyc
+${LLVM_BASE}/share/clang/clang-include-fixer.el
+${LLVM_BASE}/share/clang/clang-include-fixer.py
+${LLVM_BASE}/share/clang/clang-tidy-diff.py
+${LLVM_BASE}/share/clang/run-find-all-symbols.py
