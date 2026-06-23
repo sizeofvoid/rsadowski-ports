@@ -17,11 +17,6 @@ MODULES =		devel/cmake \
 
 TEST_DEPENDS =		devel/cbindgen
 
-RUN_DEPENDS =		devel/cxxbridge-cmd
-
 NO_BUILD =		Yes
-
-post-patch:
-	${SUBST_CMD} ${WRKSRC}/cmake/Corrosion.cmake
 
 .include <bsd.port.mk>
