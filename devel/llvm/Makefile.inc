@@ -12,6 +12,7 @@ COMMENT-libcxx =	C++ standard library
 COMMENT-lldb =		LLDB debugger
 COMMENT-python =	Python bindings for Clang
 COMMENT-tools =		Clang extra tools
+COMMENT-openmp =	Clang extra tools
 
 DISTNAME =		llvm-project-${LLVM_VERSION}.src
 
@@ -22,13 +23,14 @@ PKGNAME =		llvm-${LLVM_VERSION}
 PKGNAME-libcxx =	libcxx-${LLVM_VERSION}
 PKGNAME-lldb =		lldb-${LLVM_VERSION}
 PKGNAME-python =	${MODPY_PY_PREFIX}llvm-${LLVM_VERSION}
-PKGNAME-tools =		clang-tools-extra-${LLVM_VERSION}
+PKGNAME-openmp=		llvm-openmp-${LLVM_VERSION}
 
 PKGSPEC-main =		llvm-${LLVM_PKGSPEC}
 PKGSPEC-libcxx =	libcxx-${LLVM_PKGSPEC}
 PKGSPEC-lldb =		lldb-${LLVM_PKGSPEC}
 PKGSPEC-python =	${MODPY_PY_PREFIX}llvm-${LLVM_PKGSPEC}
 PKGSPEC-tools =		clang-tools-extra-${LLVM_PKGSPEC}
+PKGSPEC-openmp =	llvm-openmp-${LLVM_PKGSPEC}
 
 CATEGORIES =	devel
 
@@ -81,7 +83,7 @@ CONFIGURE_ARGS +=	\
 	-DLIBUNWIND_INSTALL_SHARED_LIBRARY=OFF \
 	-DLIBUNWIND_INSTALL_STATIC_LIBRARY=OFF
 
-MULTI_PACKAGES ?=	-main -python -lldb -libcxx -tools
+MULTI_PACKAGES ?=	-main -python -lldb -libcxx -tools -openmp
 PSEUDO_FLAVORS ?=	no_lldb no_tools
 
 .include <bsd.port.arch.mk>
@@ -91,8 +93,11 @@ LLDB_PROJ =	;lldb
 .if ${BUILD_PACKAGES:M-tools}
 TOOLS_PROJ =	;clang-tools-extra
 .endif
+.if ${BUILD_PACKAGES:M-openmp}
+OPENMP_PROJ =	;openmp
+.endif
 
-PROJECTS ?=	clang;lld${LLDB_PROJ}${TOOLS_PROJ}
+PROJECTS ?=	clang;lld${LLDB_PROJ}${TOOLS_PROJ}${OPENMP_PROJ}
 
 .for i in ${MULTI_PACKAGES}
 DESCR${i} =	${.CURDIR}/../files/DESCR${i}
