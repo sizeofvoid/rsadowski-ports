@@ -52,6 +52,7 @@ WANTLIB-python =
 WANTLIB-tools += ${COMPILER_LIBCXX} c m
 WANTLIB-tools += llvm${LLVM_MAJOR}/lib/LLVM
 WANTLIB-tools += llvm${LLVM_MAJOR}/lib/clang-cpp
+WANTLIB-openmp += ${COMPILER_LIBCXX} m
 
 LIB_DEPENDS-lldb += devel/llvm/${LLVM_MAJOR},-main
 LIB_DEPENDS-tools += devel/llvm/${LLVM_MAJOR},-main
@@ -62,7 +63,7 @@ EXTRACT_SUFX =	.tar.xz
 # mimic the way base libc++ is built except for the namespace which
 # is set to __E${LLVM_MAJOR} to avoid conflicts with base libc++
 CONFIGURE_ARGS +=	\
-	-DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" \
+	-DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind${OPENMP_RPROJ}" \
 	-DLIBCXX_ABI_NAMESPACE="__E${LLVM_MAJOR}" \
 	-DLIBCXX_ENABLE_STATIC=OFF \
 	-DLIBCXX_INSTALL_LIBRARY_DIR="lib" \
@@ -94,10 +95,11 @@ LLDB_PROJ =	;lldb
 TOOLS_PROJ =	;clang-tools-extra
 .endif
 .if ${BUILD_PACKAGES:M-openmp}
-OPENMP_PROJ =	;openmp
+OPENMP_RPROJ =	;openmp
+CONFIGURE_ARGS +=	-DOPENMP_ENABLE_LAYOUT=LLVM
 .endif
 
-PROJECTS ?=	clang;lld${LLDB_PROJ}${TOOLS_PROJ}${OPENMP_PROJ}
+PROJECTS ?=	clang;lld${LLDB_PROJ}${TOOLS_PROJ}
 
 .for i in ${MULTI_PACKAGES}
 DESCR${i} =	${.CURDIR}/../files/DESCR${i}
@@ -134,6 +136,7 @@ CONFIGURE_ARGS +=	\
 	-DLLVM_ENABLE_Z3_SOLVER=OFF \
 	-DLLVM_ENABLE_ZSTD=OFF \
 	-DLLVM_INCLUDE_TESTS=ON \
+	-DLLVM_INCLUDE_UTILS=ON \
 	-DLLVM_INCLUDE_GO_TESTS=OFF \
 	-DLLVM_INCLUDE_EXAMPLES=OFF \
 	-DLLVM_INCLUDE_BENCHMARKS=OFF \

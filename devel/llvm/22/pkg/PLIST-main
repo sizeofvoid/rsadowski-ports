@@ -3674,6 +3674,16 @@ ${LLVM_BASE}/include/llvm/XRay/Trace.h
 ${LLVM_BASE}/include/llvm/XRay/XRayRecord.h
 ${LLVM_BASE}/include/llvm/XRay/YAMLXRayRecord.h
 ${LLVM_BASE}/lib/
+${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/
+${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/cmake/
+${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/cmake/openmp/
+${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/cmake/openmp/FindOpenMPTarget.cmake
+@so ${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/libarcher.so
+@static-lib ${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/libarcher_static.a
+@so ${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/libgomp.so
+${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/libgomp.so.1
+@so ${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/libiomp5.so
+@so ${LLVM_BASE}/lib/amd64-unknown-openbsd7.9/libomp.so
 ${LLVM_BASE}/lib/clang/
 ${LLVM_BASE}/lib/clang/${LLVM_MAJOR}/
 ${CLANG_INCLUDE_PATH}/
@@ -3866,6 +3876,11 @@ ${CLANG_INCLUDE_PATH}/msa.h
 ${CLANG_INCLUDE_PATH}/mwaitxintrin.h
 ${CLANG_INCLUDE_PATH}/nmmintrin.h
 ${CLANG_INCLUDE_PATH}/nvptxintrin.h
+${CLANG_INCLUDE_PATH}/omp-tools.h
+${CLANG_INCLUDE_PATH}/omp.h
+${CLANG_INCLUDE_PATH}/ompt-multiplex.h
+${CLANG_INCLUDE_PATH}/ompt.h
+${CLANG_INCLUDE_PATH}/ompx.h
 ${CLANG_INCLUDE_PATH}/opencl-c-base.h
 ${CLANG_INCLUDE_PATH}/opencl-c.h
 ${CLANG_INCLUDE_PATH}/openmp_wrappers/
