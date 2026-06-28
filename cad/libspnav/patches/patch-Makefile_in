@@ -1,0 +1,14 @@
+Index: Makefile.in
+--- Makefile.in.orig
++++ Makefile.in
+@@ -20,8 +20,8 @@ else
+ 	so_major = 0
+ 	so_minor = 4
+ 	devlink = lib$(name).so
+-	soname = $(devlink).$(so_major)
+-	lib_so = $(soname).$(so_minor)
++	soname = $(devlink).${LIBspnav_VERSION}
++	lib_so = ${LIBspnav_VERSION}
+ 	shared = -shared -Wl,-soname,$(soname)
+ 	pic = -fPIC
+ endif
