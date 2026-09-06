@@ -4,8 +4,8 @@ CATEGORIES =	devel mail
 
 SHARED_LIBS +=	KPim6Mbox                 1.0 # 0.0
 
-WANTLIB += ${COMPILER_LIBCXX} KPim6Mime Qt6Core m
+WANTLIB += ${COMPILER_LIBCXX} Qt6Core m
 
-LIB_DEPENDS =	x11/kde-applications/kmime>=${VERSION}
+LIB_DEPENDS =
 
 .include <bsd.port.mk>

@@ -55,4 +55,5 @@ LIB_DEPENDS +=	archivers/lzo2 \
 
 CXXFLAGS +=	-I${LOCALBASE}/include -DNONETWORK=0
 
+LIB_DEPENDS += security/cyrus-sasl2 security/cyrus-sasl2,db4 security/cyrus-sasl2,gssapi security/cyrus-sasl2,ldap security/cyrus-sasl2,mysql security/cyrus-sasl2,pgsql security/cyrus-sasl2,sqlite3 security/libgcrypt 
 .include <bsd.port.mk>

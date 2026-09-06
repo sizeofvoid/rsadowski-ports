@@ -7,7 +7,7 @@ WANTLIB += KF6ConfigGui KF6ConfigWidgets KF6CoreAddons KF6Crash
 WANTLIB += KF6DBusAddons KF6I18n KF6I18nQml KF6IconThemes KF6ItemModels
 WANTLIB += KF6KIOCore KF6WidgetsAddons KPim6AkonadiCore KPim6AkonadiPrivate
 WANTLIB += KPim6AkonadiWidgets KPim6IdentityManagementCore KPim6MailTransport
-WANTLIB += KPim6Mime Qt6Core Qt6DBus Qt6Gui Qt6Network Qt6OpenGL
+WANTLIB += Qt6Core Qt6DBus Qt6Gui Qt6Network Qt6OpenGL
 WANTLIB += Qt6Qml Qt6Quick Qt6QuickControls2 Qt6Widgets Qt6Xml
 WANTLIB += c m
 
@@ -39,7 +39,6 @@ LIB_DEPENDS =	devel/kf6/kcolorscheme \
 		x11/kde-applications/akonadi>=${VERSION} \
 		x11/kde-applications/kidentitymanagement>=${VERSION} \
 		x11/kde-applications/kmailtransport>=${VERSION} \
-		x11/kde-applications/kmime>=${VERSION} \
 		x11/qt6/qtdeclarative
 
 TEST_IS_INTERACTIVE =	X11

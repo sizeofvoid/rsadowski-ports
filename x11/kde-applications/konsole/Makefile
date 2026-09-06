@@ -2,8 +2,8 @@ COMMENT =	KDE terminal emulator
 DISTNAME =	konsole-${VERSION}
 CATEGORIES =	editors x11
 
-SHARED_LIBS +=  konsoleprivate            12.0 # 17.08
-SHARED_LIBS +=  konsoleapp                4.0  # 21
+SHARED_LIBS +=  konsoleprivate            13.0 # 17.08
+SHARED_LIBS +=  konsoleapp                4.1  # 21
 
 WANTLIB += ${COMPILER_LIBCXX} GL KF6Attica KF6Bookmarks KF6BookmarksWidgets
 WANTLIB += KF6ColorScheme KF6Completion KF6ConfigCore KF6ConfigGui
@@ -14,7 +14,7 @@ WANTLIB += KF6NewStuffWidgets KF6Notifications KF6NotifyConfig
 WANTLIB += KF6Parts KF6Pty KF6Service KF6SonnetUi KF6TextWidgets
 WANTLIB += KF6WidgetsAddons KF6WindowSystem KF6XmlGui Qt6Core
 WANTLIB += Qt6DBus Qt6Gui Qt6Multimedia Qt6Network Qt6PrintSupport
-WANTLIB += Qt6Widgets Qt6Xml X11 c icui18n icuuc m z
+WANTLIB += Qt6Widgets Qt6Xml X11 c icui18n icuuc m ssh
 
 MODKDE_DESKTOP_FILE = yes
 MODKDE_TRANSLATIONS = yes
@@ -53,4 +53,5 @@ LIB_DEPENDS =	devel/kf6/attica \
 TEST_IS_INTERACTIVE =	X11
 TEST_DEPENDS =		${BUILD_PKGPATH}
 
+LIB_DEPENDS += security/libssh
 .include <bsd.port.mk>

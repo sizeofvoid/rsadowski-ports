@@ -9,19 +9,18 @@ WANTLIB += KF6ColorScheme KF6Completion KF6ConfigCore KF6ConfigGui
 WANTLIB += KF6ConfigWidgets KF6Contacts KF6CoreAddons KF6Crash
 WANTLIB += KF6DBusAddons KF6GuiAddons KF6I18n KF6IconThemes KF6ItemModels
 WANTLIB += KF6ItemViews KF6JobWidgets KF6KIOCore KF6KIOFileWidgets
-WANTLIB += KF6KIOGui KF6KIOWidgets KF6Notifications KF6Service
-WANTLIB += KF6Solid KF6StatusNotifierItem KF6TextAddonsWidgets
-WANTLIB += KF6TextAutoCorrectionCore KF6TextAutoCorrectionWidgets
+WANTLIB += KF6KIOGui KF6KIOWidgets KF6Mime KF6Notifications KF6Service
+WANTLIB += KF6Solid KF6SonnetUi KF6StatusNotifierItem KF6SyntaxHighlighting
+WANTLIB += KF6TextAddonsWidgets KF6TextAutoCorrectionCore KF6TextAutoCorrectionWidgets
 WANTLIB += KF6TextCustomEditor KF6TextTemplate KF6UserFeedbackCore
 WANTLIB += KF6UserFeedbackWidgets KF6WidgetsAddons KF6XmlGui KPim6AkonadiContactCore
-WANTLIB += KPim6AkonadiContactWidgets KPim6AkonadiCore KPim6AkonadiMime
-WANTLIB += KPim6AkonadiPrivate KPim6AkonadiWidgets KPim6GrantleeTheme
-WANTLIB += KPim6IMAP KPim6IdentityManagementCore KPim6IdentityManagementWidgets
-WANTLIB += KPim6Libkdepim KPim6Libkleo KPim6MailCommon KPim6MailTransport
-WANTLIB += KPim6MessageComposer KPim6MessageCore KPim6Mime KPim6PimCommon
-WANTLIB += KPim6PimCommonAkonadi KPim6TextEdit Qt6Core Qt6DBus
-WANTLIB += Qt6Gui Qt6Network Qt6Widgets Qt6Xml c gpg-error gpgme
-WANTLIB += gpgmepp m qgpgmeqt6
+WANTLIB += KPim6AkonadiContactWidgets KPim6AkonadiMime KPim6AkonadiPrivate
+WANTLIB += KPim6GrantleeTheme KPim6IdentityManagementCore KPim6IdentityManagementWidgets
+WANTLIB += KPim6Libkdepim KPim6MailCommon KPim6MailTransport KPim6MessageComposer
+WANTLIB += KPim6MessageCore KPim6MessageList KPim6MessageViewer
+WANTLIB += KPim6MimeTreeParser KPim6PimCommon KPim6PimCommonAkonadi
+WANTLIB += KPim6TextEdit Qt6Core Qt6DBus Qt6Gui Qt6Network Qt6Widgets
+WANTLIB += Qt6Xml c gpg-error gpgme gpgmepp m qgpgmeqt6
 
 MODKDE_TRANSLATIONS = yes
 MODKDE_DESKTOP_FILE = yes
@@ -50,6 +49,7 @@ LIB_DEPENDS =	devel/kf6/karchive \
 		devel/kf6/ktexttemplate \
 		devel/kf6/kguiaddons \
 		devel/kf6/kuserfeedback \
+		devel/kf6/kmime \
 		devel/kf6/kwidgetsaddons \
 		devel/kf6/kxmlgui \
 		devel/kf6/solid \
@@ -61,16 +61,14 @@ LIB_DEPENDS =	devel/kf6/karchive \
 		x11/kde-applications/akonadi>=${VERSION} \
 		x11/kde-applications/grantleetheme>=${VERSION} \
 		x11/kde-applications/kidentitymanagement>=${VERSION} \
-		x11/kde-applications/kimap>=${VERSION} \
 		x11/kde-applications/kmailtransport>=${VERSION} \
-		x11/kde-applications/kmime>=${VERSION} \
 		x11/kde-applications/kpimtextedit>=${VERSION} \
 		x11/kde-applications/libkdepim>=${VERSION} \
-		x11/kde-applications/libkleo>=${VERSION} \
 		x11/kde-applications/mailcommon>=${VERSION} \
 		x11/kde-applications/messagelib>=${VERSION} \
 		x11/kde-applications/pimcommon>=${VERSION}
 
 TEST_IS_INTERACTIVE =	X11
 
+LIB_DEPENDS += devel/kf6/sonnet devel/kf6/syntax-highlighting
 .include <bsd.port.mk>
