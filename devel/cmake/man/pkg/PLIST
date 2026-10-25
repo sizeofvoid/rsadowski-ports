@@ -10,6 +10,7 @@
 @man man/man7/cmake-configure-log.7
 @man man/man7/cmake-cxxmodules.7
 @man man/man7/cmake-developer.7
+@man man/man7/cmake-diagnostics.7
 @man man/man7/cmake-env-variables.7
 @man man/man7/cmake-file-api.7
 @man man/man7/cmake-generator-expressions.7

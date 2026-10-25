@@ -25,35 +25,20 @@ Index: Modules/FindWish.cmake
  
  get_filename_component(TCL_INCLUDE_PATH_PARENT "${TCL_INCLUDE_PATH}" PATH)
  get_filename_component(TK_INCLUDE_PATH_PARENT "${TK_INCLUDE_PATH}" PATH)
-@@ -93,16 +100,22 @@ if(WIN32)
+@@ -87,6 +94,9 @@ if(WIN32)
      )
  endif()
  
--set(TK_WISH_NAMES
--  wish
--  wish${TCL_LIBRARY_VERSION} wish${TK_LIBRARY_VERSION} wish${TCL_TCLSH_VERSION}
--  wish86 wish8.6
--  wish85 wish8.5
--  wish84 wish8.4
--  wish83 wish8.3
--  wish82 wish8.2
--  wish80 wish8.0
--  )
 +if(MODTK_VERSION)
-+  set(TK_WISH_NAMES
-+    wish${MODTK_VERSION}
-+    )
-+else(MODTK_VERSION)
-+  set(TK_WISH_NAMES
-+    wish
-+    wish${TCL_LIBRARY_VERSION} wish${TK_LIBRARY_VERSION} wish${TCL_TCLSH_VERSION}
-+    wish86 wish8.6
-+    wish85 wish8.5
-+    wish84 wish8.4
-+    wish83 wish8.3
-+    wish82 wish8.2
-+    wish80 wish8.0
-+    )
++set(TK_WISH_NAMES whish${MODTK_VERSION})
++else()
+ set(TK_WISH_NAMES
+   wish
+   wish${TCL_LIBRARY_VERSION} wish${TK_LIBRARY_VERSION} wish${TCL_TCLSH_VERSION}
+@@ -99,6 +109,7 @@ set(TK_WISH_NAMES
+   wish82 wish8.2
+   wish80 wish8.0
+   )
 +endif(MODTK_VERSION)
  
  find_program(TK_WISH

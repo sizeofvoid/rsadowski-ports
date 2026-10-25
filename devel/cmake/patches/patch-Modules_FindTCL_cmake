@@ -84,9 +84,9 @@ Index: Modules/FindTCL.cmake
 +endif()
 +
  set(TCLTK_POSSIBLE_LIB_PATH_SUFFIXES
-   lib/tcl/tcl8.7
-   lib/tcl/tk8.7
-@@ -197,16 +234,6 @@ if(Tk_FRAMEWORKS)
+   lib/tcl/tcl9.1
+   lib/tcl/tk9.1
+@@ -195,16 +232,6 @@ if(Tk_FRAMEWORKS)
    endif()
  endif()
  
